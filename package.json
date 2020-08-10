@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env=dev",
-    "build": "rm -rf dist/ && webpack --env=prod",
-    "test": "jest -c jest.config.js",
-    "lint": "eslint src/** --ext .ts,.tsx --no-error-on-unmatched-pattern",
-    "lint:fix": "npm lint --fix"
+    "start": "cd client && webpack-dev-server --env=dev",
+    "build": "cd client && rm -rf dist/ && webpack --env=prod",
+    "test": "cd client && jest -c jest.config.js",
+    "lint": "cd client && eslint src/** --ext .ts,.tsx --no-error-on-unmatched-pattern",
+    "lint:fix": "cd client && npm lint --fix"
   },
   "dependencies": {
     "axios": "^0.19.2",
