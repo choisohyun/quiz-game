@@ -21,7 +21,18 @@
 
     "paths": {
       "@/*": ["*"],
-      "@Style/*": ["style/*"]
+      "@Style/*": ["style/*"],
+      "@MainPage/*": ["views/MainPage/*"],
+      "@MyPage/*": ["views/MyPage/*"],
+      "@QuizListPage/*": ["views/QuizListPage/*"],
+      "@QuizDetailPage/*": ["views/QuizDetailPage/*"],
+      "@QuizPage/*": ["views/QuizPage/*"],
+      "@NewQuizPage/*": ["views/NewQuizPage/*"],
+      "@ErrorPage/*": ["views/ErrorPage/*"],
+      "@Loading/*": ["views/Loading/*"],
+      "@Card/*": ["components/Card/*"],
+      "@Header/*": ["components/Header/*"],
+      "@Footer/*": ["components/Footer/*"]
     }
   },
   "include": ["src"],
