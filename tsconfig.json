@@ -13,13 +13,14 @@
 
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "types": ["node"],
     "typeRoots": ["./node_modules/@types"],
 
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"],
+      "@Style/*": ["style/*"]
     }
   },
   "include": ["src"],
