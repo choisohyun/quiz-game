@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 
 import Text from "@Style/Text";
 import Button from "@Style/Button";
+import { media } from "@Style/util";
 
 interface IHeader {
   type: string;
@@ -62,10 +63,18 @@ const LeftWrapper = styled.div`
     display: flex;
     width: 50%;
   }
+  ${media.phone} {
+    display: table;
+    width: 100%;
+  }
 `;
 
 const RightWrapper = styled.div`
   margin-right: 30px;
+  ${media.phone} {
+    margin-top: -40px;
+    height: 34px;
+  }
 `;
 
 const SearchBar = styled.form`
@@ -89,6 +98,14 @@ const SearchInput = styled.input`
     border-color: ${({ theme }) => theme.light.blue1};
     box-shadow: inset 0 1px 2px ${({ theme }) => theme.light.blue3}, 0 0 0 0.2em ${({ theme }) => theme.light.blue2};
   }
+  ${media.tablet} {
+    margin-left: 5px;
+  }
+  ${media.phone} {
+    margin-top: 5px;
+    margin-left: 0px;
+    width: 89.1%;
+  }
 `;
 
 const SearchInputIcon = styled(SearchIcon)`
@@ -99,10 +116,18 @@ const SearchInputIcon = styled(SearchIcon)`
   position: absolute;
   top: 6px;
   left: 8px;
+  ${media.phone} {
+    top: 10px;
+  }
 `;
 
 const UserButton = styled(Button)`
   height: 34px;
+  ${media.phone} {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+  }
 `;
 
 const LogoutWrapper = styled.div`
