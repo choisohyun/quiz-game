@@ -1,5 +1,4 @@
 import { DefaultTheme } from "styled-components";
-import { customMediaQuery } from "@Style/util";
 
 export const theme: DefaultTheme = {
   dark: {
@@ -63,11 +62,6 @@ export const theme: DefaultTheme = {
     bold: 700,
     semiBold: 600,
     regular: 400,
-  },
-  media: {
-    desktop: customMediaQuery(922),
-    tablet: customMediaQuery(768),
-    phone: customMediaQuery(576),
   },
   response: {},
 };
