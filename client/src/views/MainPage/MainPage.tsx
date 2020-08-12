@@ -1,9 +1,13 @@
 import React from "react";
 
-interface Props {}
+import Header from "@Header/Header";
 
-const MainPage = (props: Props) => {
-  return <div>ddd</div>;
+const MainPage = () => {
+  return (
+    <>
+      <Header type="none" />
+    </>
+  );
 };
 
 export default MainPage;
