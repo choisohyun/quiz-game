@@ -2,6 +2,7 @@ const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const OfflinePlugin = require("offline-plugin");
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 
@@ -49,6 +50,7 @@ module.exports = merge(common, {
     new Dotenv({
       path: path.resolve(__dirname, "./.env.production"),
     }),
+    new OfflinePlugin(),
     new WebpackPwaManifest({
       name: "Anyone Anywhere Enjoy QUIZ GAME",
       short_name: "QUIZ GAME",
