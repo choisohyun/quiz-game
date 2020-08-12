@@ -26,4 +26,33 @@ const MainPage = () => {
   );
 };
 
+const Description = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+const AnimWrapper = styled.div`
+  width: 100%;
+  text-indent: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+const Phrase = styled(Text)`
+  text-align: center;
+`;
+
+const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  ${Button}:first-child {
+    margin-right: 0.5rem;
+  }
+`;
+
 export default MainPage;
