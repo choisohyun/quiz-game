@@ -60,11 +60,6 @@ declare module "styled-components" {
       semiBold: number;
       regular: number;
     };
-    media: {
-      desktop: string;
-      tablet: string;
-      phone: string;
-    };
     response: {};
   }
 }
