@@ -20,7 +20,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Reset />
         <Router>
-          <Suspense fallback={Loading}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Switch>
               <Route path="/" exact component={MainPage} />
               <Route path="/mypage" exact component={MyPage} />
