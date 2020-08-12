@@ -33,6 +33,12 @@ const Description = styled.div`
   flex-wrap: wrap;
 `;
 
+const topToBottom = keyframes`
+  0% { content: "QUIZ EAZY"; }
+  50% { color: white; }
+  100% { content: "QUIZY"; }
+`;
+
 const AnimWrapper = styled.div`
   width: 100%;
   text-indent: 8px;
@@ -40,6 +46,16 @@ const AnimWrapper = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 30vh;
+  &:after {
+    animation: ${topToBottom} 3s linear infinite alternate;
+    font-size: 5rem;
+    font-weight: 800;
+    content: "QUIZ EAZY";
+    color: ${({ theme }) => theme.light.gray4};
+    text-align: center;
+  }
+`;
+
 const Phrase = styled(Text)`
   text-align: center;
 `;
