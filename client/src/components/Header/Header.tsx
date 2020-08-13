@@ -47,11 +47,10 @@ const Header = ({ type }: IHeader) => {
 const Wrapper = styled.header`
   width: 100%;
   height: 100px;
-  background-color: ${({ theme }) => theme.light.green};
+  background-color: ${({ theme }) => theme.mode.green};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
   position: relative;
 `;
 
@@ -87,17 +86,17 @@ const SearchBar = styled.form`
 const SearchInput = styled.input`
   padding-left: 30px;
   background: none;
-  color: ${({ theme }) => theme.light.white};
+  color: ${({ theme }) => theme.mode.white};
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme.light.white};
+  border: 1px solid ${({ theme }) => theme.mode.white};
   outline: none;
   height: 30px;
   width: inherit;
   font-size: 16px;
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.light.blue1};
-    box-shadow: inset 0 1px 2px ${({ theme }) => theme.light.blue3}, 0 0 0 0.2em ${({ theme }) => theme.light.blue2};
+    border-color: ${({ theme }) => theme.mode.blue1};
+    box-shadow: inset 0 1px 2px ${({ theme }) => theme.mode.blue3}, 0 0 0 0.2em ${({ theme }) => theme.mode.blue2};
   }
   ${media.tablet} {
     margin-left: 5px;
@@ -111,7 +110,7 @@ const SearchInput = styled.input`
 
 const SearchInputIcon = styled(SearchIcon)`
   display: block;
-  color: ${({ theme }) => theme.light.white};
+  color: ${({ theme }) => theme.mode.white};
   text-align: center;
   pointer-events: none;
   position: absolute;

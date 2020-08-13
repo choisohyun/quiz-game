@@ -10,7 +10,7 @@ interface IText {
 
 const Text = styled.span<IText>`
   display: inline-block;
-  color: ${({ theme, color }) => (color && theme.light[color]) || theme.light.black};
+  color: ${({ theme, color }) => (color && theme.mode[color]) || theme.mode.primaryText};
   font-size: ${({ theme, fontSize }) => (fontSize && (theme.fontSizes[fontSize] || fontSize)) || theme.fontSizes.md};
   font-weight: ${({ theme, fontWeight }) => (fontWeight && theme.fontWeights[fontWeight]) || theme.fontWeights.regular};
   line-height: ${({ lineHeight }) => lineHeight};

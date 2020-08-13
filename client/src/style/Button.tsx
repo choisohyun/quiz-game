@@ -13,15 +13,15 @@ interface IButton {
 
 const Button = styled.button.attrs({ type: "button" })<IButton>`
   background-color: ${({ theme, backgroundColor }) =>
-    (backgroundColor && theme.light[backgroundColor]) || theme.light.green};
-  color: ${({ theme, color }) => (color && theme.light[color]) || theme.light.white};
+    (backgroundColor && theme.mode[backgroundColor]) || theme.mode.green};
+  color: ${({ theme, color }) => (color && theme.mode[color]) || theme.mode.white};
   font-size: ${({ theme, fontSize }) => (fontSize && theme.fontSizes[fontSize]) || theme.fontSizes.md};
   font-weight: ${({ bold }) => (bold ? "bold" : "normal")};
   pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
   border-radius: 10px;
-  border: 1px solid ${({ theme, borderColor }) => (borderColor && theme.light[borderColor]) || theme.light.gray2};
+  border: 1px solid ${({ theme, borderColor }) => (borderColor && theme.mode[borderColor]) || theme.mode.gray2};
   text-align: center;
   padding: ${({ paddingSize }) => (paddingSize ? paddingSize : "10px 15px")};
   display: flex;
