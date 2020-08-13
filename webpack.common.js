@@ -38,6 +38,7 @@ module.exports = {
       "@": path.resolve(__dirname, "client/src/"),
       "@Main": path.resolve(__dirname, "client/src/components/Main/"),
       "@Style": path.resolve(__dirname, "client/src/style/"),
+      "@Hooks": path.resolve(__dirname, "client/src/hooks/"),
       "@MainPage": path.resolve(__dirname, "client/src/views/MainPage/"),
       "@MyPage": path.resolve(__dirname, "client/src/views/MyPage/"),
       "@QuizListPage": path.resolve(__dirname, "client/src/views/QuizListPage/"),
@@ -49,6 +50,7 @@ module.exports = {
       "@Card": path.resolve(__dirname, "client/src/components/Card/"),
       "@Header": path.resolve(__dirname, "client/src/components/Header/"),
       "@Footer": path.resolve(__dirname, "client/src/components/Footer/"),
+      "@Toggle": path.resolve(__dirname, "client/src/components/Toggle/"),
     },
   },
 

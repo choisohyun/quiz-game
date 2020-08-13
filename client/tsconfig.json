@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["*"],
       "@Style/*": ["style/*"],
+      "@Hooks/*": ["hooks/*"],
       "@MainPage/*": ["views/MainPage/*"],
       "@MyPage/*": ["views/MyPage/*"],
       "@QuizListPage/*": ["views/QuizListPage/*"],
@@ -32,7 +33,8 @@
       "@Loading/*": ["views/Loading/*"],
       "@Card/*": ["components/Card/*"],
       "@Header/*": ["components/Header/*"],
-      "@Footer/*": ["components/Footer/*"]
+      "@Footer/*": ["components/Footer/*"],
+      "@Toggle/*": ["components/Toggle/*"]
     }
   },
   "include": ["src"],
