@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Reset } from "styled-reset";
 
-import { theme } from "@Style/theme";
+import { dark, light, fontSizes, fontWeights } from "@Style/theme";
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 const MainPage = lazy(() => import("@MainPage/MainPage"));
 const MyPage = lazy(() => import("@MyPage/MyPage"));
@@ -15,6 +16,10 @@ const Loading = lazy(() => import("@Loading/Loading"));
 const ErrorPage = lazy(() => import("@ErrorPage/ErrorPage"));
 
 const App = () => {
+  const [themeMode, toggleTheme] = useDarkMode();
+  const theme =
+    themeMode === "light" ? { mode: light, fontSizes, fontWeights } : { mode: dark, fontSizes, fontWeights };
+
   return (
     <>
       <ThemeProvider theme={theme}>
