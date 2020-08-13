@@ -5,7 +5,7 @@ const dark = {
   secondaryText: "rgba(255,255,255,0.45)",
   disable: "rgba(255,255,255,0.25)",
   border: "#d1d5da",
-  divider: "rgba(106, 115, 125, 0.3)",
+  divider: "rgba(255, 255, 255, 0.6)",
   background: "rgb(217, 223, 226)",
   tableHeader: "rgba(255,255,255,0.02)",
   themeIcon: "#FBE302",
