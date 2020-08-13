@@ -1,6 +1,6 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { Reset } from "styled-reset";
 
 import { dark, light, fontSizes, fontWeights } from "@Style/theme";
@@ -25,23 +25,29 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Reset />
-        <Router>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Switch>
-              <Route path="/" exact component={MainPage} />
-              <Route path="/mypage" exact component={MyPage} />
-              <Route path="/quiz" exact component={QuizListPage} />
-              <Route path="/quiz/:quizId" exact component={QuizDetailPage} />
-              <Route path="/quiz/:quizId/:quizNumber" exact component={QuizPage} />
-              <Route path="/new" exact component={NewQuizPage} />
-              <Route component={ErrorPage} />
-            </Switch>
-          </Suspense>
-        </Router>
         <Toggle themeMode={themeMode} toggleTheme={toggleTheme} />
+        <Backgound>
+          <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Switch>
+                <Route path="/" exact component={MainPage} />
+                <Route path="/mypage" exact component={MyPage} />
+                <Route path="/quiz" exact component={QuizListPage} />
+                <Route path="/quiz/:quizId" exact component={QuizDetailPage} />
+                <Route path="/quiz/:quizId/:quizNumber" exact component={QuizPage} />
+                <Route path="/new" exact component={NewQuizPage} />
+                <Route component={ErrorPage} />
+              </Switch>
+            </Suspense>
+          </Router>
+        </Backgound>
       </ThemeProvider>
     </>
   );
 };
+
+const Backgound = styled.div`
+  background-color: ${({ theme }) => theme.mode.mainBackground};
+`;
 
 export default App;
