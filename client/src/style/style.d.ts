@@ -2,9 +2,8 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    dark: {
+    mode: {
       mainBackground: string;
-      title: string;
       primaryText: string;
       secondaryText: string;
       disable: string;
@@ -12,28 +11,7 @@ declare module "styled-components" {
       divider: string;
       background: string;
       tableHeader: string;
-      blue1: string;
-      blue2: string;
-      blue3: string;
-      green: string;
-      gray1: string;
-      gray2: string;
-      gray3: string;
-      gray4: string;
-      black: string;
-      red: string;
-      white: string;
-    };
-    light: {
-      mainBackground: string;
-      title: string;
-      primaryText: string;
-      secondaryText: string;
-      disable: string;
-      border: string;
-      divider: string;
-      background: string;
-      tableHeader: string;
+      themeIcon: string;
       blue1: string;
       blue2: string;
       blue3: string;
@@ -60,6 +38,5 @@ declare module "styled-components" {
       semiBold: number;
       regular: number;
     };
-    response: {};
   }
 }
