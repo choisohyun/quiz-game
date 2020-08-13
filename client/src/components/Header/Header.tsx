@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 
 import Text from "@Style/Text";
 import Button from "@Style/Button";
+import Avatar from "@Style/Avatar";
 import { media } from "@Style/util";
 
 interface IHeader {
@@ -133,13 +134,6 @@ const UserButton = styled(Button)`
 const LogoutWrapper = styled.div`
   display: flex;
   align-items: center;
-`;
-
-const Avatar = styled.img`
-  height: 30px;
-  width: 30px;
-  border-radius: 5px;
-  margin: 0 15px 0 10px;
 `;
 
 export default Header;
