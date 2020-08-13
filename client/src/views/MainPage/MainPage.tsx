@@ -7,7 +7,7 @@ const MainPage = () => {
   return (
     <>
       <Header type="user" />
-      <Description />
+      <Description isUser={false} />
     </>
   );
 };
