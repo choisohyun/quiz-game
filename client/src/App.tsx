@@ -5,6 +5,7 @@ import { Reset } from "styled-reset";
 
 import { dark, light, fontSizes, fontWeights } from "@Style/theme";
 import { useDarkMode } from "@/hooks/useDarkMode";
+import Toggle from "@/components/Toggle/Toggle";
 
 const MainPage = lazy(() => import("@MainPage/MainPage"));
 const MyPage = lazy(() => import("@MyPage/MyPage"));
@@ -37,6 +38,7 @@ const App = () => {
             </Switch>
           </Suspense>
         </Router>
+        <Toggle themeMode={themeMode} toggleTheme={toggleTheme} />
       </ThemeProvider>
     </>
   );
